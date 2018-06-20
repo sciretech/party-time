@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 class App extends \atk4\ui\App {
 	function __construct($is_admin = false) {
