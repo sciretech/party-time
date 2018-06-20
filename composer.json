@@ -1,0 +1,7 @@
+{
+    "require": {
+        "atk4/ui": "^1.5",
+        "atk4/login": "^1.0",
+        "atk4/schema": "^1.1"
+    }
+}
