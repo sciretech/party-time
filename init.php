@@ -19,7 +19,7 @@ class App extends \atk4\ui\App {
 		} else {
 			$this->initLayout('Centered');
 		}
-		$this->dbConnect(isset($_ENV['CLEARDB_DATABASE_URL']) ? $_ENV['CLEARDB_DATABASE_URL']: 'mysql://atk4:2pMnl7&4@localhost/atk4');
+		$this->dbConnect(isset($_ENV['CLEARDB_DATABASE_URL']) ? $_ENV['CLEARDB_DATABASE_URL']: 'mysql://atk4:2pMnl7&4@sciretech.com:3306/atk4');
 	}
 }
 
@@ -46,6 +46,7 @@ class Dashboard extends \atk4\ui\View {
 
 		$this->template['guests'] = $model->action('count')->getOne();
 		$this->template['drinks'] = $model->action('fx', ['sum', 'units_of_drink'])->getOne();
+		$this->template['average_age'] = $model->action('fx', ['avg', 'age'])->getOne();
 		return $model;
 
 	}
