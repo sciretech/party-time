@@ -40,13 +40,13 @@ class Guest extends \atk4\data\Model {
 }
 
 class Dashboard extends \atk4\ui\View {
-/*	public $defaultTemplate = __DIR__. '/dashboard.html';
-	function setModel($m)	{
+	public $defaultTemplate = __DIR__. '/dashboard.html';
+	function setModel(\atk4\data\Model $m) {
 		$model = parent::setModel($m);
 
 		$this->template['guests'] = $model->action('count')->getOne();
 		$this->template['drinks'] = $model->action('fx', ['sum', 'units_of_drink'])->getOne();
 		return $model;
 
-	}*/
+	}
 }
